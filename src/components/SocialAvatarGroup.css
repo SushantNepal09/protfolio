@@ -1,0 +1,75 @@
+.avatar-group-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--bg-color);
+  margin-top: -15px; /* Overlapping effect */
+  transition: margin 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.avatar-item:first-child {
+  margin-top: 0;
+}
+
+/* Spread out slightly when hovering over the group */
+.avatar-group-container:hover .avatar-item {
+  margin-top: 8px;
+}
+
+.avatar-group-container:hover .avatar-item:first-child {
+  margin-top: 0;
+}
+
+.avatar-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 3px solid var(--bg-color); /* Creates the cut-out look for overlapping */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.avatar-item:hover .avatar-circle {
+  background: var(--accent-color);
+  color: #121212;
+  border-color: #121212;
+}
+
+.avatar-tooltip {
+  position: absolute;
+  right: 65px; /* Position to the left of the vertical icons */
+  background: var(--text-primary);
+  color: var(--bg-color);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Tooltip little arrow */
+.avatar-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--text-primary);
+}

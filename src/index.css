@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;900&display=swap');
+
+:root {
+  --bg-color: #121212; /* Very dark, almost black */
+  --text-primary: #f2f2f2;
+  --text-secondary: #888888;
+  --accent-color: #f15636; /* Striking Orange */
+
+  --font-display: 'Anton', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Massive typography */
+.display-text {
+  font-family: var(--font-display);
+  font-size: 10vw; /* Responsive massive text */
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.mono-text {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 8rem;
+  line-height: 0.9;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Utilities */
+.text-outline {
+  -webkit-text-stroke: 2px var(--accent-color);
+  color: transparent;
+}

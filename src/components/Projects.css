@@ -1,0 +1,140 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-brutalist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.project-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-index {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.project-title {
+  font-size: 8vw;
+  line-height: 0.85;
+  margin-bottom: 10px;
+}
+
+.project-category {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 50px;
+}
+
+.project-desc {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #AAAAAA;
+  max-width: 600px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.project-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.project-image-box {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background: #333;
+  border: 4px solid transparent;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.5s ease, 
+              border-color 0.5s ease;
+}
+
+.project-image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              filter 0.5s ease;
+  filter: grayscale(80%) brightness(0.8);
+}
+
+/* Enhanced hover animations */
+.project-brutalist:hover .project-image-box {
+  transform: translateY(-15px) scale(1.02);
+  border-color: var(--accent-color);
+  box-shadow: 0 15px 40px rgba(255, 62, 0, 0.4), 
+              0 0 80px rgba(255, 62, 0, 0.2);
+  z-index: 2;
+}
+
+.project-brutalist:hover .project-image {
+  transform: scale(1.1);
+  filter: grayscale(0%) brightness(1.1);
+}
+
+.project-link-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-color);
+  color: var(--text-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.project-image-box:hover .project-link-icon {
+  background: var(--accent-color);
+  color: #121212;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .project-brutalist {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .project-left {
+    align-items: center;
+  }
+  
+  .project-desc {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .project-right {
+    justify-content: center;
+  }
+}

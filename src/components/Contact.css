@@ -1,0 +1,73 @@
+.contact-brutalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form-wrapper {
+  width: 100%;
+  max-width: 800px;
+}
+
+.brutalist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.brutalist-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--text-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  padding: 10px 0;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.brutalist-input::placeholder {
+  color: #444444;
+}
+
+.brutalist-input:focus {
+  outline: none;
+  border-bottom-color: var(--accent-color);
+}
+
+.brutalist-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.brutalist-btn:hover {
+  background: var(--text-primary);
+  color: var(--bg-color);
+}
+
+.status-message {
+  margin-top: 20px;
+}
+
+.status-message.success {
+  color: #27ae60;
+}
+
+.status-message.error {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .brutalist-input, .brutalist-btn {
+    font-size: 1.5rem;
+  }
+}

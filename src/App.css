@@ -1,0 +1,104 @@
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+/* Fixed Elements Layout */
+.fixed-layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; /* Let clicks pass through */
+  z-index: 100;
+  padding: 30px 40px;
+}
+
+.fixed-layout > * {
+  pointer-events: auto; /* Re-enable clicks on children */
+  position: absolute;
+}
+
+.fixed-logo {
+  top: 30px;
+  left: 40px;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.fixed-nav {
+  top: 30px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: right;
+}
+
+.fixed-nav a {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.fixed-nav a:hover {
+  color: var(--accent-color);
+}
+
+.fixed-location {
+  bottom: 30px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed-socials {
+  bottom: 30px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.5rem;
+}
+
+.fixed-socials a {
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.fixed-socials a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  /* No padding here, allow sections to go full width */
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 120px;
+}
+
+@media (max-width: 768px) {
+  .fixed-layout {
+    padding: 20px;
+  }
+  .fixed-logo { top: 20px; left: 20px; }
+  .fixed-nav { top: 20px; right: 20px; flex-direction: row; gap: 15px; }
+  .fixed-location { display: none; }
+  .fixed-socials { bottom: 20px; right: 20px; flex-direction: row; }
+  section { padding: 100px 20px; }
+  .section-title { font-size: 4rem; }
+}
