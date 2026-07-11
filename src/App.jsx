@@ -5,6 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import SocialAvatarGroup from './components/SocialAvatarGroup';
+import TechStack from './components/TechStack';
 
 function App() {
   const [time, setTime] = useState(new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
@@ -24,6 +25,7 @@ function App() {
         
         <nav className="fixed-nav">
           <a href="#projects">WORKS</a>
+          <a href="#tech-stack">STACK</a>
           <a href="#about">ABOUT</a>
           <a href="#contact">CONTACT</a>
         </nav>
@@ -42,6 +44,7 @@ function App() {
       <main>
         <Hero />
         <Projects />
+        <TechStack />
         <About />
         <Contact />
       </main>
