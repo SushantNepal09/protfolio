@@ -62,8 +62,8 @@ const TechStack = () => {
           speed={15}
           textColor="#E0E0E0"
           bgColor="#121212"
-          marqueeBgColor="#FFFFFF"
-          marqueeTextColor="#121212"
+          marqueeBgColor="rgba(255, 255, 255, 0.05)"
+          marqueeTextColor="#FFFFFF"
           borderColor="#333333"
         />
       </motion.div>
