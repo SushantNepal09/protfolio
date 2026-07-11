@@ -7,44 +7,32 @@ const stackItems = [
   { 
     link: '#', 
     text: 'FLUTTER', 
-    image: 'https://skillicons.dev/icons?i=flutter',
-    color: '#02569B',
-    itemTextColor: '#FFFFFF'
+    image: 'https://skillicons.dev/icons?i=flutter'
   },
   { 
     link: '#', 
     text: 'FASTAPI', 
-    image: 'https://skillicons.dev/icons?i=fastapi',
-    color: '#009688',
-    itemTextColor: '#FFFFFF'
+    image: 'https://skillicons.dev/icons?i=fastapi'
   },
   { 
     link: '#', 
     text: 'NESTJS', 
-    image: 'https://skillicons.dev/icons?i=nestjs',
-    color: '#E0234E',
-    itemTextColor: '#FFFFFF'
+    image: 'https://skillicons.dev/icons?i=nestjs'
   },
   { 
     link: '#', 
     text: 'SUPABASE', 
-    image: 'https://skillicons.dev/icons?i=supabase',
-    color: '#3ECF8E',
-    itemTextColor: '#121212'
+    image: 'https://skillicons.dev/icons?i=supabase'
   },
   { 
     link: '#', 
     text: 'GITHUB', 
-    image: 'https://skillicons.dev/icons?i=github',
-    color: '#181717',
-    itemTextColor: '#FFFFFF'
+    image: 'https://skillicons.dev/icons?i=github'
   },
   { 
     link: '#', 
     text: 'RENDER', 
-    image: 'https://img.shields.io/badge/Render-%2346E3B7.svg?style=for-the-badge&logo=render&logoColor=white',
-    color: '#46E3B7',
-    itemTextColor: '#121212'
+    image: 'https://img.shields.io/badge/Render-Black.svg?style=for-the-badge&logo=render&logoColor=white'
   },
 ];
 
@@ -74,7 +62,7 @@ const TechStack = () => {
           speed={15}
           textColor="#E0E0E0"
           bgColor="#121212"
-          marqueeBgColor="#ff3e00"
+          marqueeBgColor="#FFFFFF"
           marqueeTextColor="#121212"
           borderColor="#333333"
         />
