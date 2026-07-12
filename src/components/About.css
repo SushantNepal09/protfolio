@@ -8,11 +8,25 @@
   margin-bottom: 50px;
 }
 
+.about-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
 .about-content-brutalist {
-  max-width: 900px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.about-profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-text-large {
@@ -26,4 +40,15 @@
 .about-text-small {
   max-width: 500px;
   line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .about-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-text-small {
+    max-width: 100%;
+  }
 }

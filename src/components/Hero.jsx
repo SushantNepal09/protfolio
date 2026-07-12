@@ -50,9 +50,9 @@ const Hero = () => {
           I AM SUSHANT AND I BUILD
         </motion.p>
         <motion.h1 className="display-text text-center" style={{ overflow: 'hidden', fontSize: '6vw' }}>
-          <motion.span variants={itemVariants} className="text-block">SCALABLE BACKEND SYSTEMS</motion.span>
-          <motion.span variants={itemVariants} className="text-block">WITH FASTAPI & INTELLIGENT</motion.span>
-          <motion.span variants={itemVariants} className="text-block">MOBILE APPS USING FLUTTER</motion.span>
+          <motion.span variants={itemVariants} className="text-block">BACKEND WITH FASTAPI</motion.span>
+          <motion.span variants={itemVariants} className="text-block">& FRONTEND MOBILE</motion.span>
+          <motion.span variants={itemVariants} className="text-block">APPLICATIONS</motion.span>
         </motion.h1>
       </motion.div>
     </section>

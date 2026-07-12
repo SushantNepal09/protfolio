@@ -29,6 +29,15 @@ const projects = [
 const Projects = () => {
   return (
     <div id="projects" className="projects-container">
+      <motion.h2 
+        className="display-text projects-heading"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        MY WORK
+      </motion.h2>
       {projects.map((project, i) => (
         <section key={i} className="project-brutalist">
           <motion.div 

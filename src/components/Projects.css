@@ -3,6 +3,17 @@
   flex-direction: column;
 }
 
+.projects-heading {
+  margin-bottom: 0px;
+  padding-top: 120px;
+  padding-left: 0;
+  color: var(--text-primary);
+  font-size: 3rem;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
 .project-brutalist {
   display: flex;
   justify-content: center;
@@ -136,5 +147,12 @@
   
   .project-right {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-heading {
+    padding-left: 0;
+    font-size: 2.5rem;
   }
 }
