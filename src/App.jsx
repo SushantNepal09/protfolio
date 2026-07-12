@@ -33,8 +33,8 @@ function App() {
         ]}
         socialItems={[
           { label: 'GitHub', link: 'https://github.com/sushantnepal09', icon: <FaGithub /> },
-          { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sushant-nepal-29505432a/', icon: <FaLinkedin /> },
-          { label: 'Email', link: 'mailto:nepalsushant94@gmail.com', icon: <FaEnvelope /> },
+          { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sushant-nepal-3579b4352', icon: <FaLinkedin /> },
+          { label: 'Email', link: 'mailto:sushant.nepaloc218@gmail.com', icon: <FaEnvelope /> },
         ]}
       />
       {/* Fixed Corners Overlay */}

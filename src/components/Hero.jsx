@@ -47,7 +47,7 @@ const Hero = () => {
         animate="show"
       >
         <motion.p variants={itemVariants} className="mono-text text-center">
-          I AM SUSHANT AND I BUILD
+          I AM SUSHANT NEPAL AND I BUILD
         </motion.p>
         <motion.h1 className="display-text text-center" style={{ overflow: 'hidden', fontSize: '6vw' }}>
           <motion.span variants={itemVariants} className="text-block">BACKEND WITH FASTAPI</motion.span>

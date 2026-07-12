@@ -8,20 +8,23 @@ const projects = [
     category: 'FLUTTER, FASTAPI, POSTGRESQL, RENDER',
     index: '01/03',
     image: '/protfolio/disaster360.png',
+    link: 'https://github.com/SushantNepal09/Disaster360-Backend',
     desc: 'Disaster360 is a disaster management platform for reporting incidents and coordinating emergency response. It connects citizens, rescue teams, and administrators in real time.'
   },
   {
-    title: 'PLUS-2',
+    title: 'EKUL',
     category: 'NESTJS, RENDER',
     index: '02/03',
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop',
-    desc: 'Plus2 is an AI-powered college recommendation platform project to help +2 graduates discover personalized college options while simplifying access to admissions, scholarships, programs, and career guidance.'
+    link: 'https://ekkul.com/',
+    desc: 'Ekul is an AI-powered college recommendation platform project to help +2 graduates discover personalized college options while simplifying access to admissions, scholarships, programs, and career guidance.'
   },
   {
     title: 'COLLEGE SYSTEM',
     category: 'FLUTTER',
     index: '03/03',
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop',
+    link: 'https://github.com/SushantNepal09/CollegeManagementSystem',
     desc: 'COMPREHENSIVE MANAGEMENT SOLUTION BUILT EXCLUSIVELY WITH FLUTTER.'
   }
 ];
@@ -52,6 +55,9 @@ const Projects = () => {
             <p className="mono-text project-category">{project.category}</p>
             
             <p className="project-desc">{project.desc}</p>
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="view-project-btn brutalist-btn">
+              VIEW PROJECT
+            </a>
           </motion.div>
           
           <div className="project-right project-preview">

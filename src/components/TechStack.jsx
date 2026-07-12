@@ -38,6 +38,11 @@ const stackItems = [
     text: 'RENDER', 
     image: 'https://img.shields.io/badge/Render-Black.svg?style=for-the-badge&logo=render&logoColor=white'
   },
+  { 
+    link: '#', 
+    text: 'POSTGRES', 
+    image: 'https://skillicons.dev/icons?i=postgres'
+  },
 ];
 
 const TechStack = () => {
