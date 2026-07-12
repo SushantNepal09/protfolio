@@ -42,7 +42,7 @@ const TechStack = () => {
         className="section-title text-outline text-center"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         style={{ marginBottom: '50px' }}
       >
@@ -56,7 +56,7 @@ const TechStack = () => {
             className="tech-item"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
             whileHover={{ scale: 1.05 }}
           >

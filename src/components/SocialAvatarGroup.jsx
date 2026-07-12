@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import './SocialAvatarGroup.css';
@@ -11,9 +11,25 @@ const socials = [
 
 const SocialAvatarGroup = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        setHoveredIndex(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="avatar-group-container">
+    <div className="avatar-group-container" ref={containerRef}>
       {socials.map((social, index) => (
         <a 
           key={social.id} 
