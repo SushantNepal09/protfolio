@@ -7,21 +7,21 @@ const projects = [
     title: 'DISASTER360',
     category: 'FLUTTER, FASTAPI, POSTGRESQL, RENDER',
     index: '01/03',
-    image: '/disaster360.png',
+    image: '/protfolio/disaster360.png',
     desc: 'Disaster360 is a disaster management platform for reporting incidents and coordinating emergency response. It connects citizens, rescue teams, and administrators in real time.'
   },
   {
     title: 'PLUS-2',
     category: 'NESTJS, RENDER',
     index: '02/03',
-    image: 'https://via.placeholder.com/800x600/444444/FFFFFF?text=PLUS-2',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop',
     desc: 'Plus2 is an AI-powered college recommendation platform project to help +2 graduates discover personalized college options while simplifying access to admissions, scholarships, programs, and career guidance.'
   },
   {
     title: 'COLLEGE SYSTEM',
     category: 'FLUTTER',
     index: '03/03',
-    image: 'https://via.placeholder.com/800x600/555555/FFFFFF?text=COLLEGE+SYSTEM',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop',
     desc: 'COMPREHENSIVE MANAGEMENT SOLUTION BUILT EXCLUSIVELY WITH FLUTTER.'
   }
 ];
@@ -53,6 +53,12 @@ const Projects = () => {
             
             <p className="project-desc">{project.desc}</p>
           </motion.div>
+          
+          <div className="project-right project-preview">
+            <div className="project-image-box">
+              <img src={project.image} alt={project.title} className="project-image" />
+            </div>
+          </div>
         </section>
       ))}
     </div>

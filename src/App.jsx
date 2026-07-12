@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import SocialAvatarGroup from './components/SocialAvatarGroup';
 import TechStack from './components/TechStack';
 import StaggeredMenu from './components/StaggeredMenu';
+import TrailCursor from './components/TrailCursor';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <TrailCursor />
       <StaggeredMenu
         isFixed={true}
         items={[

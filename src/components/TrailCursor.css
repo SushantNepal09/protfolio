@@ -1,0 +1,18 @@
+.trail-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Ensure it doesn't block clicks */
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.trail-cursor-point {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  will-change: opacity, transform;
+}

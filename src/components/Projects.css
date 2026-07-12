@@ -20,6 +20,7 @@
   align-items: center;
   min-height: 100vh;
   text-align: center;
+  position: relative;
 }
 
 .project-left {
@@ -28,6 +29,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 10; /* Keep text above the preview image */
 }
 
 .project-index {
@@ -58,18 +61,31 @@
   text-align: center;
 }
 
-.project-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.project-right.project-preview {
+  display: none; /* Disabled for now as requested. Remove this line to re-enable the hover images */
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: 5%;
+  transform: translateY(-50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-brutalist:hover .project-right.project-preview {
+  opacity: 0.8; /* Slight transparency so text is readable */
+  transform: translateY(-50%) scale(1);
 }
 
 .project-image-box {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 350px;
   background: #333;
+  border-radius: 24px;
+  overflow: hidden;
   border: 4px solid transparent;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
               box-shadow 0.5s ease, 
@@ -91,13 +107,11 @@
   filter: grayscale(80%) brightness(0.8);
 }
 
-/* Enhanced hover animations */
+/* Enhanced hover animations are managed above now, but we keep the box styling */
 .project-brutalist:hover .project-image-box {
-  transform: translateY(-15px) scale(1.02);
   border-color: var(--accent-color);
   box-shadow: 0 15px 40px rgba(255, 62, 0, 0.4), 
               0 0 80px rgba(255, 62, 0, 0.2);
-  z-index: 2;
 }
 
 .project-brutalist:hover .project-image {
@@ -154,5 +168,19 @@
   .projects-heading {
     padding-left: 0;
     font-size: 2.5rem;
+  }
+
+  .project-right.project-preview {
+    left: auto;
+    right: 10px;
+    transform: translateY(-50%) scale(0.9);
+  }
+
+  .project-brutalist:hover .project-right.project-preview {
+    transform: translateY(-50%) scale(1);
+  }
+
+  .project-image-box {
+    max-width: 180px;
   }
 }
