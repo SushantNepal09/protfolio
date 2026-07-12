@@ -9,7 +9,7 @@ const About = () => {
         className="about-header"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         <h2 className="section-title text-outline">ABOUT ME</h2>
@@ -19,7 +19,7 @@ const About = () => {
         className="about-content-brutalist"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <p className="about-text-small mono-text">

@@ -6,6 +6,8 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import SocialAvatarGroup from './components/SocialAvatarGroup';
 import TechStack from './components/TechStack';
+import StaggeredMenu from './components/StaggeredMenu';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function App() {
   const [time, setTime] = useState(new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
@@ -19,24 +21,26 @@ function App() {
 
   return (
     <div className="app-container">
+      <StaggeredMenu
+        isFixed={true}
+        items={[
+          { label: 'WORKS', ariaLabel: 'Go to Projects section', link: '#projects' },
+          { label: 'STACK', ariaLabel: 'Go to Tech Stack section', link: '#tech-stack' },
+          { label: 'ABOUT', ariaLabel: 'Go to About section', link: '#about' },
+          { label: 'CONTACT', ariaLabel: 'Go to Contact section', link: '#contact' },
+        ]}
+        socialItems={[
+          { label: 'GitHub', link: 'https://github.com/sushantnepal09', icon: <FaGithub /> },
+          { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sushant-nepal-29505432a/', icon: <FaLinkedin /> },
+          { label: 'Email', link: 'mailto:nepalsushant94@gmail.com', icon: <FaEnvelope /> },
+        ]}
+      />
       {/* Fixed Corners Overlay */}
       <div className="fixed-layout">
-        <a href="#home" className="fixed-logo">SUSHANT</a>
-        
-        <nav className="fixed-nav">
-          <a href="#projects">WORKS</a>
-          <a href="#tech-stack">STACK</a>
-          <a href="#about">ABOUT</a>
-          <a href="#contact">CONTACT</a>
-        </nav>
         
         <div className="fixed-location mono-text">
           <span>KATHMANDU</span>
           <span>{time}</span>
-        </div>
-        
-        <div className="fixed-socials">
-          <SocialAvatarGroup />
         </div>
       </div>
 

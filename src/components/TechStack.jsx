@@ -25,6 +25,11 @@ const stackItems = [
   },
   { 
     link: '#', 
+    text: 'PYTHON', 
+    image: 'https://skillicons.dev/icons?i=python'
+  },
+  { 
+    link: '#', 
     text: 'GITHUB', 
     image: 'https://skillicons.dev/icons?i=github'
   },

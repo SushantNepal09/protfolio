@@ -35,7 +35,7 @@ const Projects = () => {
             className="project-left"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <p className="mono-text project-index">{project.index}</p>

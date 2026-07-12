@@ -47,7 +47,7 @@ const Contact = () => {
         className="section-title"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         LET'S TALK
@@ -57,7 +57,7 @@ const Contact = () => {
         className="contact-form-wrapper"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <form onSubmit={handleSubmit} className="brutalist-form">
