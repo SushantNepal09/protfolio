@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import FlowingMenu from './FlowingMenu';
 import './TechStack.css';
 
 const stackItems = [
@@ -50,23 +49,22 @@ const TechStack = () => {
         TECH STACK
       </motion.h2>
       
-      <motion.div 
-        className="flowing-menu-container"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <FlowingMenu 
-          items={stackItems} 
-          speed={15}
-          textColor="#E0E0E0"
-          bgColor="#121212"
-          marqueeBgColor="rgba(255, 255, 255, 0.05)"
-          marqueeTextColor="#FFFFFF"
-          borderColor="#333333"
-        />
-      </motion.div>
+      <div className="tech-grid">
+        {stackItems.map((item, idx) => (
+          <motion.div 
+            key={idx} 
+            className="tech-item"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <img src={item.image} alt={item.text} className="tech-icon" />
+            <span className="tech-name mono-text">{item.text}</span>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 };
